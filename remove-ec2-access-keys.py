@@ -10,9 +10,9 @@ sts_client = boto3.client('sts')
 
 try:
     sts_response = sts_client.assume_role(
-        RoleArn='arn:aws:iam::652750387684:role/AdminCrossAccountAccessRole',
+        RoleArn='arn:aws:iam::<xxxxxx>:role/AdminCrossAccountAccessRole',
         RoleSessionName='myapp_session',
-        ExternalId='12345'
+        ExternalId='xxxxxx'
     )
 
     access_key_id = sts_response['Credentials']['AccessKeyId']
